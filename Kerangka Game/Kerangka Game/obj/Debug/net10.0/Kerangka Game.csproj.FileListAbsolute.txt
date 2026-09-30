@@ -1,0 +1,15 @@
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\bin\Debug\net10.0\Kerangka Game.exe
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\bin\Debug\net10.0\Kerangka Game.deps.json
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\bin\Debug\net10.0\Kerangka Game.runtimeconfig.json
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\bin\Debug\net10.0\Kerangka Game.dll
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\bin\Debug\net10.0\Kerangka Game.pdb
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.AssemblyInfoInputs.cache
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.AssemblyInfo.cs
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.csproj.CoreCompileInputs.cache
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.dll
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\refint\Kerangka Game.dll
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.pdb
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka Game.genruntimeconfig.cache
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\ref\Kerangka Game.dll
+C:\Users\cicie\Documents\Visual Studio\Kerangka game\Kerangka Game\Kerangka Game\obj\Debug\net10.0\Kerangka.E3F31CD8.Up2Date
