@@ -39,64 +39,118 @@
                 Console.WriteLine($"{nama} melakukan healing. Kesehatan sekarang: {kesehatan}");
             }
 
-            public void Posisi() //method untuk perpindahan posisi karakter
+        public void Posisi()
+        {
+            Console.WriteLine("\n===> Perpindahan Posisi Karakter <===");
+            Console.WriteLine("Mana yang kamu pilih?");
+            Console.WriteLine("1. Perpindahan angka");
+            Console.WriteLine("2. Tombol di keyboard");
+            Console.Write("Pilihan mu (1 atau 2) : ");
+
+            string pilihan = Console.ReadLine();
+
+            if (pilihan == "1")
             {
+                PosisiAngka();
+            }
+            else if (pilihan == "2")
+            {
+                PosisiKeyboard();
+            }
+            else
+            {
+                Console.WriteLine("Pilihan tidak tersedia!");
+            }
+        }
+
+        // Method untuk memasukkan posisi menggunakan angka
+        public void PosisiAngka()
+        {
+            int posisiAwal = 0;
+
+            Console.WriteLine("\n===> Perpindahan Angka <===");
+            Console.WriteLine($"Karaktermu: {nama}");
+            Console.WriteLine($"Posisi saat ini : {posisiAwal}");
+
+            Console.Write("Masukkan jumlah posisi perpindahan : ");
+
+            if (int.TryParse(Console.ReadLine(), out int posisiSekarang))
+            {
+                Console.WriteLine(
+                    $"{nama} berpindah dari posisi {posisiAwal} ke posisi {posisiSekarang}"
+                );
+            }
+            else
+            {
+                Console.WriteLine("Input harus berupa angka!");
+            }
+        }
+
+        // Method untuk berpindah menggunakan tombol keyboard
+        public void PosisiKeyboard()
+        {
             int posisiSekarang = 0;
 
-            Console.WriteLine("===> Perpindahan Posisi Karakter <===");
-            Console.WriteLine($"Karaktermu : {nama} / Kekuatan : {senjata} / Kesehatan : {kesehatan}");
-            Console.WriteLine($"Posisi saat ini : {posisiSekarang}");
+            Console.WriteLine("\n===> Perpindahan Posisi Karakter <===");
+            Console.WriteLine(
+                $"Karaktermu: {nama} / Kekuatan: {senjata} / Kesehatan: {kesehatan}"
+            );
+            Console.WriteLine($"Posisi saat ini: {posisiSekarang}");
+            Console.WriteLine("Arrow Right: Posisi +2");
+            Console.WriteLine("Arrow Left : Posisi -1");
+            Console.WriteLine("Esc        : Berhenti");
 
-                while (true) // Mengulang program terus-menerus sampai dihentikan
+            while (true)
+            {
+                ConsoleKeyInfo tombol = Console.ReadKey(true);
+
+                if (tombol.Key == ConsoleKey.RightArrow)
                 {
-                    ConsoleKeyInfo tombol = Console.ReadKey(true); // Membaca tombol keyboard tanpa menampilkannya di terminal
-                
-                    if (tombol.Key == ConsoleKey.RightArrow) // Mengecek apakah tombol panah kanan ditekan
-                    {
-                        posisiSekarang += 2; // Menambah posisi sebanyak 2 angka
-                    }
-                    else if (tombol.Key == ConsoleKey.LeftArrow) // Mengecek apakah tombol panah kiri ditekan
-                    {
-                        posisiSekarang -= 1; // Mengurangi posisi sebanyak 1 angka
-                    }
-                    else if (tombol.Key == ConsoleKey.Escape) // Mengecek apakah tombol Esc ditekan
-                    {
-                        Console.WriteLine("permainan Berhenti"); // Menampilkan tulisan permainan Berhenti
-                        break; // Menghentikan perulangan while
-                    }
-                    else
-                    {
-                        continue; // Melewati tombol lain dan kembali membaca input keyboard
-                    }
-                
-                    Console.WriteLine($"Posisi saat ini : {posisiSekarang}"); // Menampilkan posisi karakter terbaru
+                    posisiSekarang += 2;
                 }
-            }
+                else if (tombol.Key == ConsoleKey.LeftArrow)
+                {
+                    posisiSekarang -= 1;
+                }
+                else if (tombol.Key == ConsoleKey.Escape)
+                {
+                    Console.WriteLine("permainan Berhenti");
+                    break;
+                }
+                else
+                {
+                    continue;
+                }
 
-            public void getData()
+                Console.WriteLine($"Posisi saat ini: {posisiSekarang}");
+            }
+        }
+        public void getData()
 
             {
                 Console.WriteLine($"Karakter: {nama}, Kesehatan: {kesehatan}, Damage Senjata: {senjata}, Jumlah Senjata: {jumlahSenjata}");
             }
-
         }
 
         class MainProgram
         {
-            static void Main(string[] args)
-            {
-
-
-                Karakter player1 = new Karakter("Dhinezad", 100, 25, 2); //membuat objek
+           static void Main(string[] args)
+           {
+                // Membuat objek karakter
+                Karakter player1 = new Karakter("Dhinezad", 100, 25, 2);
                 Karakter musuh = new Karakter("Zobie", 100, 20, 1);
 
-                //interaksi antar objek
-                player1.Serang(musuh); //memanggil method menyerang
-                player1.getData(); 
-                musuh.Serang(player1);
-                player1.Healing(); //memanggil method Healing
+                // Interaksi antar karakter
+                player1.Serang(musuh);
                 player1.getData();
-                player1.Posisi(); //memanggil method Posisi
+
+                musuh.Serang(player1);
+
+                player1.Healing();
+                player1.getData();
+
+                // Menjalankan menu perpindahan posisi
+                player1.Posisi();
             }
         }
     }
