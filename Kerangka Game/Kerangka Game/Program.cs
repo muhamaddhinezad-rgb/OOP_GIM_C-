@@ -47,31 +47,31 @@
             Console.WriteLine($"Karaktermu : {nama} / Kekuatan : {senjata} / Kesehatan : {kesehatan}");
             Console.WriteLine($"Posisi saat ini : {posisiSekarang}");
 
-            while (true) // Mengulang program terus-menerus sampai dihentikan
-            {
-                ConsoleKeyInfo tombol = Console.ReadKey(true); // Membaca tombol keyboard tanpa menampilkannya di terminal
-            
-                if (tombol.Key == ConsoleKey.RightArrow) // Mengecek apakah tombol panah kanan ditekan
+                while (true) // Mengulang program terus-menerus sampai dihentikan
                 {
-                    posisiSekarang += 2; // Menambah posisi sebanyak 2 angka
+                    ConsoleKeyInfo tombol = Console.ReadKey(true); // Membaca tombol keyboard tanpa menampilkannya di terminal
+                
+                    if (tombol.Key == ConsoleKey.RightArrow) // Mengecek apakah tombol panah kanan ditekan
+                    {
+                        posisiSekarang += 2; // Menambah posisi sebanyak 2 angka
+                    }
+                    else if (tombol.Key == ConsoleKey.LeftArrow) // Mengecek apakah tombol panah kiri ditekan
+                    {
+                        posisiSekarang -= 1; // Mengurangi posisi sebanyak 1 angka
+                    }
+                    else if (tombol.Key == ConsoleKey.Escape) // Mengecek apakah tombol Esc ditekan
+                    {
+                        Console.WriteLine("permainan Berhenti"); // Menampilkan tulisan permainan Berhenti
+                        break; // Menghentikan perulangan while
+                    }
+                    else
+                    {
+                        continue; // Melewati tombol lain dan kembali membaca input keyboard
+                    }
+                
+                    Console.WriteLine($"Posisi saat ini : {posisiSekarang}"); // Menampilkan posisi karakter terbaru
                 }
-                else if (tombol.Key == ConsoleKey.LeftArrow) // Mengecek apakah tombol panah kiri ditekan
-                {
-                    posisiSekarang -= 1; // Mengurangi posisi sebanyak 1 angka
-                }
-                else if (tombol.Key == ConsoleKey.Escape) // Mengecek apakah tombol Esc ditekan
-                {
-                    Console.WriteLine("permainan Berhenti"); // Menampilkan tulisan permainan Berhenti
-                    break; // Menghentikan perulangan while
-                }
-                else
-                {
-                    continue; // Melewati tombol lain dan kembali membaca input keyboard
-                }
-            
-                Console.WriteLine($"Posisi saat ini : {posisiSekarang}"); // Menampilkan posisi karakter terbaru
             }
-        }
 
             public void getData()
 
@@ -92,11 +92,11 @@
 
                 //interaksi antar objek
                 player1.Serang(musuh); //memanggil method menyerang
-                player1.getData();
+                player1.getData(); 
                 musuh.Serang(player1);
-                player1.Healing();
+                player1.Healing(); //memanggil method Healing
                 player1.getData();
-                player1.Posisi();
+                player1.Posisi(); //memanggil method Posisi
             }
         }
     }
